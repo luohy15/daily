@@ -1,7 +1,7 @@
 dir=$(date +%Y/%m/%d)
 case $1 in
 add)
-    if [[ ! -d $dir/$2-$3 ]]
+    if [[ ! -n $(find . -name "test_$2.py") ]]
     then
         echo "add $dir/$2-$3"
         cp -r template/python $dir/$2-$3
@@ -15,7 +15,7 @@ add)
     ;;
 remove)
     echo "remove $dir/$2-*"
-    rm -rf $dir/$2-*
+    find . -name "test_$2.py" | xargs dirname | xargs rm -rf
     ;;
 test)
     pytest -v $(find . -name "test_$2.py")
