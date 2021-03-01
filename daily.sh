@@ -5,6 +5,10 @@ add)
     then
         echo "add $dir/$2-$3"
         cp -r template/python $dir/$2-$3
+        mv $dir/$2-$3/main.py $dir/$2-$3/main_$2.py
+        mv $dir/$2-$3/test.py $dir/$2-$3/test_$2.py
+        sed -i'.original' -e "s/main/main_$2/g" $dir/$2-$3/test_$2.py
+        rm $dir/$2-$3/test_$2.py.original
     else
         echo "$dir/$2-$3 exists"
     fi
@@ -14,7 +18,7 @@ remove)
     rm -rf $dir/$2-*
     ;;
 test)
-    cd $dir/$2-* && python3 main_test.py
+    pytest -v $(find . -name "test_$2.py")
     ;;
 *)
     echo "Usage:"
