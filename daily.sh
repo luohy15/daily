@@ -3,6 +3,7 @@ case $1 in
 add)
     if [[ ! -n $(find . -name "test_$2.py") ]]
     then
+        mkdir -p $dir
         echo "add $dir/$2-$3"
         cp -r template/python $dir/$2-$3
         mv $dir/$2-$3/main.py $dir/$2-$3/main_$2.py
