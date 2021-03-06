@@ -1,4 +1,11 @@
 class MyQueue(object):
+    """
+    time:
+        O(1) for push and empty
+        amortized O(1) for pop and peek
+    space:
+        O(n)
+    """
 
     def __init__(self):
         """
