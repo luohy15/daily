@@ -1,10 +1,15 @@
 class Solution(object):
     """
-    brute force: blabla
-    time: O(1)
-    space: O(1)
+    brute force:
+        simulate with the aware of current direction
+    time: O(m*n)
+    space: O(m*n)
     """
-    def traverse(self, matrix):
+    def spiralOrder(self, matrix):
+        """
+        :type matrix: List[List[int]]
+        :rtype: List[int]
+        """
         dirs = [[0,1],[1,0],[0,-1],[-1,0]]
         curr_dir = 0
         li = len(matrix)
