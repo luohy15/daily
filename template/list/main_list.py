@@ -20,10 +20,9 @@ def list2arr(_list):
         cur = cur.next
     return arr
 
-def checkSolution(arr_in, arr_out):
+def checkFunc(arr_in, arr_out, func):
     list_in = arr2list(arr_in)
-    # list_out = Solution().func(list_in)
-    list_out = ListNode()
+    list_out = func(list_in)
     cur = list_out
     for a in arr_out:
         assert cur.val == a
