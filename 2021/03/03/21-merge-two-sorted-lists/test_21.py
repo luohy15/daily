@@ -1,34 +1,29 @@
-import unittest
+import pytest
 
-from main_21 import Solution
-from main_21_1 import Solution
+
 from main_21 import ListNode
+from main_21 import Solution as Solution0
+from main_21_1 import Solution as Solution1
+import sys
+sys.path.append("./")
+from lib.list import arr2list, list2arr
 
-def test1():
-    l1 = ListNode(1)
-    l1n = ListNode(2)
-    l1nn = ListNode(4)
-    l1.next = l1n
-    l1n.next = l1nn
-    l2 = ListNode(1)
-    l2n = ListNode(3)
-    l2nn = ListNode(4)
-    l2.next = l2n
-    l2n.next = l2nn
-    l = Solution().mergeTwoLists(l1, l2)
-    res = [1, 1, 2, 3, 4, 4]
-    for i in range(6):
-        assert l.val == res[i]
-        l = l.next
-    assert l == None
+@pytest.fixture(params=[Solution0, Solution1])
+def Solution(request):
+    return request.param
 
-def test2():
+def test1(Solution):
+    l1 = arr2list([1,2,4])
+    l2 = arr2list([1,3,4])
+    assert list2arr(Solution().mergeTwoLists(l1, l2)) == [1, 1, 2, 3, 4, 4]
+
+def test2(Solution):
     l1 = None
     l2 = None
     l = Solution().mergeTwoLists(l1, l2)
     assert l == None
 
-def test3():
+def test3(Solution):
     l1 = None
     l2 = ListNode(0)
     l = Solution().mergeTwoLists(l1, l2)

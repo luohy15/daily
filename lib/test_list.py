@@ -1,4 +1,4 @@
-from main_list import *
+from lib.list import *
 
 def test1():
     arr_in = [1,2,3]

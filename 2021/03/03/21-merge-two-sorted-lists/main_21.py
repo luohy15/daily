@@ -9,6 +9,8 @@ class Solution(object):
     brute force:
         while l1 and l2: merge smaller one
         when finished: merge remaining all
+    time: O(n+m)
+    space: O(1)
     """
     def mergeTwoLists(self, l1, l2):
         """

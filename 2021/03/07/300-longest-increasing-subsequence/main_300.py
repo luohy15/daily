@@ -1,13 +1,6 @@
-def lower_bound(arr, value):
-    l = 0
-    r = len(arr)
-    while l < r:
-        mid = (l + r) // 2
-        if arr[mid] < value:
-            l = mid + 1
-        else:
-            r = mid
-    return l
+import sys
+sys.path.append("./")
+from lib.binarysearch import lower_bound
 
 class Solution(object):
     """

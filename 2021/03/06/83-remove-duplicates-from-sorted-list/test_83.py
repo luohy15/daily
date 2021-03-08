@@ -1,23 +1,10 @@
-import unittest
+import pytest
 
 from main_83 import Solution
 from main_83 import ListNode
-
-def arr2list(arr):
-    dummy = ListNode()
-    cur = dummy
-    for a in arr:
-        cur.next = ListNode(a)
-        cur = cur.next
-    return dummy.next
-
-def list2arr(_list):
-    arr = []
-    cur = _list
-    while cur:
-        arr.append(cur.val)
-        cur = cur.next
-    return arr
+import sys
+sys.path.append("./")
+from lib.list import arr2list, list2arr
 
 def checkSolution(arr_in, arr_out):
     list_in = arr2list(arr_in)

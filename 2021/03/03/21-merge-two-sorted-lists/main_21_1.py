@@ -9,6 +9,8 @@ class Solution(object):
     recursive:
         if one is None, return another
         otherwise merge recursively
+    time: O(n+m)
+    space: O(n+m)
     """
     def mergeTwoLists(self, l1, l2):
         """

@@ -1,6 +1,10 @@
-import unittest
+import pytest
 
-from main import Solution
+from main import Solution as Solution0
 
-def test1():
+@pytest.fixture(params=[Solution0])
+def Solution(request):
+    return request.param
+
+def test1(Solution):
     pass

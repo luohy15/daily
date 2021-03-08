@@ -1,15 +1,10 @@
-import unittest
+import pytest
 
 from main_141 import Solution
 from main_141 import ListNode
-
-def arr2list(arr):
-    dummy = ListNode(-1)
-    cur = dummy
-    for a in arr:
-        cur.next = ListNode(a)
-        cur = cur.next
-    return dummy.next
+import sys
+sys.path.append("./")
+from lib.list import arr2list, list2arr
 
 def test1():
     arr = [3,2,0,-4]
