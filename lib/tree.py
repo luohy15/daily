@@ -5,7 +5,7 @@ class TreeNode(object):
         self.left = left
         self.right = right
     
-def buildTree(arr):
+def arr2tree(arr):
     if len(arr) == 0:
         return None
     tree = []
@@ -22,3 +22,28 @@ def buildTree(arr):
         if ri < len(arr) and tree[ri] is not None:
             tree[i].right = tree[ri]
     return tree[0]
+
+def tree2arr(root):
+    q = []
+    nextq = []
+    res = []
+    if root:
+        q.append(root)
+    while True:
+        ress = []
+        while q:
+            cur = q.pop(0)
+            if cur:
+                ress.append(cur.val)
+                nextq.append(cur.left)
+                nextq.append(cur.right)
+            else:
+                ress.append(None)
+        if ress:
+            if not all(v is None for v in ress):
+                res.extend(ress)
+            q = nextq
+            nextq = []
+        else:
+            break
+    return res

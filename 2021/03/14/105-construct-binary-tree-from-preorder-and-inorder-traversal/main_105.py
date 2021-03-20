@@ -10,12 +10,12 @@ class Solution(object):
     time: O(n)
     space: O(n)
     """
-    def buildTree(self, preorder: List[int], inorder: List[int]) -> TreeNode:
+    def arr2tree(self, preorder: List[int], inorder: List[int]) -> TreeNode:
         if len(preorder) <= 0:
             return
         val = preorder[0]
         node = TreeNode(val)
         idx = inorder.index(val)
-        node.left = self.buildTree(preorder[1:idx+1], inorder[:idx])
-        node.right = self.buildTree(preorder[idx+1:], inorder[idx+1:])
+        node.left = self.arr2tree(preorder[1:idx+1], inorder[:idx])
+        node.right = self.arr2tree(preorder[idx+1:], inorder[idx+1:])
         return node

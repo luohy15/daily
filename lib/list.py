@@ -19,12 +19,3 @@ def list2arr(_list):
         arr.append(cur.val)
         cur = cur.next
     return arr
-
-def checkFunc(arr_in, arr_out, func):
-    list_in = arr2list(arr_in)
-    list_out = func(list_in)
-    cur = list_out
-    for a in arr_out:
-        assert cur.val == a
-        cur = cur.next
-    assert cur == None
