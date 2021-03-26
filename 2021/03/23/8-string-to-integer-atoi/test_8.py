@@ -20,3 +20,6 @@ def test4(Solution):
 
 def test5(Solution):
     assert Solution().myAtoi("-91283472332") == -2147483648
+
+def test6(Solution):
+    assert Solution().myAtoi("0010") == 10
