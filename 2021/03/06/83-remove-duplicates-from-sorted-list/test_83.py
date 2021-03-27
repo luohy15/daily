@@ -1,10 +1,9 @@
 import pytest
 
 from main_83 import Solution
-from main_83 import ListNode
 import sys
 sys.path.append("./")
-from lib.list import arr2list, list2arr
+from lib.list import ListNode, arr2list, list2arr
 
 def checkSolution(arr_in, arr_out):
     list_in = arr2list(arr_in)

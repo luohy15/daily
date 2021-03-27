@@ -1,10 +1,9 @@
 import pytest
 
-from main_25 import ListNode
 from main_25 import Solution as Solution0
 from main_25_1 import Solution as Solution1
 from main_25_2 import Solution as Solution2
-from lib.list import arr2list, list2arr
+from lib.list import ListNode, arr2list, list2arr
 
 @pytest.fixture(params=[Solution0, Solution1, Solution2])
 def Solution(request):

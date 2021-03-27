@@ -1,3 +1,7 @@
+import sys
+sys.path.append("./")
+from lib.list import ListNode
+
 def merge(lists, l, r):
     if l >= r:
         return None
@@ -27,12 +31,6 @@ def mergeTwoLists(l1, l2):
     else:
         tmp.next = l2
     return res.next
-
-# Definition for singly-linked list.
-class ListNode(object):
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
 
 class Solution(object):
     """

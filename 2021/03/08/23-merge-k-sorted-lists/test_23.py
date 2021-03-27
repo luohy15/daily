@@ -1,13 +1,12 @@
 import pytest
 
-from main_23 import ListNode
 from main_23 import Solution as Solution0
 from main_23_1 import Solution as Solution1
 from main_23_2 import Solution as Solution2
 from main_23_3 import Solution as Solution3
 import sys
 sys.path.append("./")
-from lib.list import arr2list, list2arr
+from lib.list import ListNode, arr2list, list2arr
 
 @pytest.fixture(params=[Solution0, Solution1, Solution2, Solution3])
 def Solution(request):

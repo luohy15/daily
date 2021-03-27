@@ -10,6 +10,7 @@ def mergesort(nums, l, r):
     i = l
     j = mid + 1
     while i <= mid or j <= r:
+        # 如果j已经合并完或者nums[i]小于nums[j]
         if j > r or (i <= mid and nums[i] < nums[j]):
             res.append(nums[i])
             i += 1

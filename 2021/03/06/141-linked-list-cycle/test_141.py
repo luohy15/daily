@@ -1,10 +1,9 @@
 import pytest
 
 from main_141 import Solution
-from main_141 import ListNode
 import sys
 sys.path.append("./")
-from lib.list import arr2list, list2arr
+from lib.list import ListNode, arr2list, list2arr
 
 def test1():
     arr = [3,2,0,-4]
