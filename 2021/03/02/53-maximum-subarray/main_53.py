@@ -1,6 +1,7 @@
 class Solution(object):
     """
-    brute force:
+    动态规划:
+        f(i) = max{f(i-1)+nums[i], nums[i]}
         maintain sum, max
         if sum > max, update max
         if sum < 0, drop sum

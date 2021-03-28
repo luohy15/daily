@@ -6,7 +6,7 @@ def count(ma, n):
     if n in ma:
         ma[n] += 1
     else:
-        ma[n] = 0
+        ma[n] = 1
     return ma
 
 class Solution(object):

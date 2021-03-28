@@ -1,9 +1,8 @@
 import pytest
 
-from main_5710 import Solution as Solution0
-from main_5710_1 import Solution as Solution1
+from main_1801 import Solution as Solution0
 
-@pytest.fixture(params=[Solution0, Solution1])
+@pytest.fixture(params=[Solution0])
 def Solution(request):
     return request.param
 

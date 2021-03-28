@@ -17,7 +17,7 @@ def dfs(node, remain):
 
 class Solution(object):
     """
-    反向后序遍历
+    反向中序遍历
     time: O(n)
     space: O(n)
     """
