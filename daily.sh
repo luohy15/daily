@@ -1,3 +1,4 @@
+set -e
 dir=$(date +%Y/%m/%d)
 case $1 in
 add)
@@ -5,7 +6,12 @@ add)
     then
         mkdir -p $dir
         echo "add $dir/$2-$3"
-        cp -r template/python $dir/$2-$3
+        if [[ -n $4 ]]
+        then
+            cp -r template/$4 $dir/$2-$3
+        else
+            cp -r template/python $dir/$2-$3
+        fi
         mv $dir/$2-$3/main.py $dir/$2-$3/main_$2.py
         mv $dir/$2-$3/test.py $dir/$2-$3/test_$2.py
         sed -i'.original' -e "s/main/main_$2/g" $dir/$2-$3/test_$2.py
