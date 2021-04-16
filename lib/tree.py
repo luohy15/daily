@@ -4,7 +4,7 @@ class TreeNode(object):
         self.val = val
         self.left = left
         self.right = right
-    
+
 def arr2tree(arr):
     if len(arr) == 0:
         return None

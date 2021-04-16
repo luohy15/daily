@@ -35,4 +35,3 @@ class Solution(object):
                 curr_dir += 1
                 curr_dir %= 4
         return res
-    

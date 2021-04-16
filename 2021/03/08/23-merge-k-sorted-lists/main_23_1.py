@@ -45,4 +45,3 @@ class Solution(object):
         :rtype: ListNode
         """
         return merge(lists, 0, len(lists))
-

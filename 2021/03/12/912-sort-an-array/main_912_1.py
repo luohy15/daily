@@ -7,7 +7,7 @@ def heapshiftdown(nums, i, l):
         # 如果右节点比左节点大，将待替换节点设置为右节点
         if j + 1 < l and nums[j] < nums[j + 1]:
             j = j + 1
-        # 大顶堆：如果顶比节点小，则需要替换 
+        # 大顶堆：如果顶比节点小，则需要替换
         if nums[i] < nums[j]:
             nums[i], nums[j] = nums[j], nums[i]
             i = j

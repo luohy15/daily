@@ -28,4 +28,3 @@ class Solution(object):
                 nums1[tail] = nums1[p1]
                 p1 -= 1
             tail -= 1
-            

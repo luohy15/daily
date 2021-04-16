@@ -7,7 +7,7 @@ class LRUCache:
         # key到链表节点的映射
         self.idx = {}
         self.capacity = capacity
-    
+
     def get(self, key: int) -> int:
         if key in self.idx:
             # 如果在cache中，更新
@@ -29,7 +29,7 @@ class LRUCache:
         # 添加到尾部
         self.idx[key] = (key, value)
         self.cache.append(self.idx[key])
-        
+
 
 
 # Your LRUCache object will be instantiated and called as such:

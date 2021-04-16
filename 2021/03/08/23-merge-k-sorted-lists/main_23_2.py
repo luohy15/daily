@@ -16,7 +16,7 @@ class Solution(object):
         """
         dummy = ListNode()
         cur = dummy
-        
+
         while True:
             mi = 10 ** 5
             idx = -1
@@ -30,4 +30,3 @@ class Solution(object):
             cur = cur.next
             lists[idx] = lists[idx].next
         return dummy.next
-

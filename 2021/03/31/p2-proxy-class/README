@@ -1,0 +1,21 @@
+设计一个简单通用的托管类 Proxy, 创建实例(p)时传入其他类实例(orig),即可以通过p调用所有orig的方法.
+例如:
+
+    class Hello(object):
+        def __init__(self, name):
+            self.name = name
+
+        def hello(self):
+            print 'hello', self.name
+
+    class Proxy(object):
+        ...
+
+    h = Hello('world')
+    p = Proxy(h)
+    p.hello()             # 应该间接调用h.hello(), 输出"hello world"
+    print p.name          # 应该打印:world
+    p.name  = 'jobs'
+    p.hello()             # 应该间接调用h.hello(), 输出"hello jobs"
+
+请设计Proxy类. 注:不能简单为Proxy写简单hello方法.

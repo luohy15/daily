@@ -13,7 +13,7 @@ class Solution(object):
     def __init__(self):
         self.fa = {}
         self.vis = set()
-    
+
     def dfs(self, curr):
         if curr.left:
             self.fa[curr.left.val] = curr

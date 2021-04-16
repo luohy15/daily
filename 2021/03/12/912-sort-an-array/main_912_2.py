@@ -18,7 +18,7 @@ def mergesort(nums, l, r):
             res.append(nums[j])
             j += 1
     nums[l:r+1] = res
-    
+
 class Solution(object):
     """
     归并排序：

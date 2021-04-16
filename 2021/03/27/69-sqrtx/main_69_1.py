@@ -9,7 +9,7 @@ class Solution(object):
     def mySqrt(self, x: int) -> int:
         if x == 0:
             return 0
-        
+
         C, x0 = float(x), float(x)
         while True:
             fx0 = x0 * x0 - C
@@ -18,5 +18,5 @@ class Solution(object):
             if abs(xi - x0) < 1e-7:
                 break
             x0 = xi
-        
+
         return int(x0)

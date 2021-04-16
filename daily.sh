@@ -20,6 +20,15 @@ add)
         echo "$dir/$2-$3 exists"
     fi
     ;;
+move)
+    echo "move $2 $3 $4"
+    dir=$(dirname $(find . -name "test_$2.py"))
+    mv $dir/main_$2.py $dir/main_$3.py
+    sed -i'.original' -e "s/main_$2/main_$3/g" $dir/test_$2.py
+    rm $dir/test_$2.py.original
+    mv $dir/test_$2.py $dir/test_$3.py
+    mv $dir $(dirname $dir)/$3-$4
+    ;;
 remove)
     echo "remove $dir/$2-*"
     find . -name "test_$2.py" | xargs dirname | xargs rm -rf
@@ -30,6 +39,7 @@ test)
 *)
     echo "Usage:"
     echo "  ./daily.sh add [id] [name]"
+    echo "  ./daily.sh move [id(old)] [id(new)] [name(new)]"
     echo "  ./daily.sh remove [id]"
     echo "  ./daily.sh test [id]"
 esac

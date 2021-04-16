@@ -44,5 +44,3 @@ class Solution(object):
         for i in lists[1:]:
             dummy.next = mergeTwoLists(dummy.next, i)
         return dummy.next
-
-    

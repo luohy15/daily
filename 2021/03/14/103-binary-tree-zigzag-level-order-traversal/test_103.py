@@ -18,7 +18,7 @@ def test1(Solution):
         [15,7]
     ]
     assert Solution().zigzagLevelOrder(tree) == res
-    
+
 def test2(Solution):
     arr = [1,2,3,4,None,None,5]
     tree = arr2tree(arr)

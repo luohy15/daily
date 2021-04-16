@@ -41,5 +41,3 @@ class Solution(object):
         :rtype: int
         """
         return quickselect(nums, 0, len(nums) - 1, k - 1)
-        
-        

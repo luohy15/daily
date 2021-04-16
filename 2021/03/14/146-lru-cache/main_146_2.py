@@ -18,7 +18,7 @@ class LRUCache():
         self.idx = {}
         self.capacity = capacity
         self.len = 0
-    
+
     def get(self, key: int) -> int:
         # 如果不在，返回-1
         if key not in self.idx:
@@ -47,11 +47,11 @@ class LRUCache():
                 self.remove(node)
                 del self.idx[node.key]
                 self.len -= 1
-        
+
     def remove(self, node):
         node.prev.next = node.next
         node.next.prev = node.prev
-    
+
     def append(self, node):
         node.prev = self.tail.prev
         node.prev.next = node

@@ -8,7 +8,7 @@ class LRUCache(collections.OrderedDict):
         super().__init__()
         # key到链表节点的映射
         self.capacity = capacity
-    
+
     def get(self, key: int) -> int:
         # 如果不在，返回-1
         if key not in self:
@@ -24,7 +24,7 @@ class LRUCache(collections.OrderedDict):
         self[key] = value
         if len(self) > self.capacity:
             self.popitem(last=False)
-        
+
 
 
 # Your LRUCache object will be instantiated and called as such:

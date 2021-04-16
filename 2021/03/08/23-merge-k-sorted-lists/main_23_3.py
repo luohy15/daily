@@ -32,4 +32,3 @@ class Solution(object):
                 lists[idx] = l.next
                 hq.heappush(q, (l.next.val, idx))
         return dummy.next
-

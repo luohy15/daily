@@ -13,4 +13,3 @@ def Solution(request):
 def test1(Solution):
     root = [3,5,1,6,2,0,8,None,None,7,4]
     assert Solution().lowestCommonAncestor(arr2tree(root), TreeNode(5), TreeNode(1)).val == 3
-

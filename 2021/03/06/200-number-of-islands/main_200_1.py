@@ -25,4 +25,4 @@ class Solution(object):
                 if grid[i][j] == "1":
                     res += 1
                     dfs(grid, i, j)
-        return res 
+        return res

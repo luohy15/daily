@@ -24,4 +24,3 @@ class Solution(object):
         if carry:
             res += str(carry)
         return res[::-1]
-        

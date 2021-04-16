@@ -18,4 +18,3 @@ def test1(Solution):
         [15,7]
     ]
     assert Solution().levelOrder(tree) == res
-    

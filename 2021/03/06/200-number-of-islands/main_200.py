@@ -29,4 +29,4 @@ class Solution(object):
                             if newi >= 0 and newi < li and newj >= 0 and newj < lj and grid[newi][newj] == "1":
                                 q.append([newi, newj])
                                 grid[newi][newj] = "0"
-        return res 
+        return res

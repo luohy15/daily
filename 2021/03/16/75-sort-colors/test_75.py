@@ -26,7 +26,7 @@ def test4(Solution):
     nums = [1]
     Solution().sortColors(nums)
     assert nums == [1]
-    
+
 def test5(Solution):
     nums = [2,1]
     Solution().sortColors(nums)

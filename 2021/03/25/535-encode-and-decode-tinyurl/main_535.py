@@ -37,7 +37,7 @@ class Codec:
         """Decodes a shortened URL to its original URL.
         """
         return self.short2long[shortUrl]
-        
+
 
 # Your Codec object will be instantiated and called as such:
 # codec = Codec()
